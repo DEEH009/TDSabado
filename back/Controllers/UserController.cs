@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using dto;
 
 namespace back.Controllers;
-
+using Services;
 using Model;
 
 [ApiController]
@@ -10,8 +10,9 @@ using Model;
 public class UserController : ControllerBase
 {
     [HttpPost("login")]
-    public IActionResult Login(
-        [FromBody]UsuarioDTO user
+    public async Task<IActionResult> Login(
+        [FromBody]UsuarioDTO user,
+        [FromServices]TokenService service
     )
     {
         using TDSabadoContext context 
@@ -26,8 +27,10 @@ public class UserController : ControllerBase
 
         if (possibleUser.Userpass != user.Password)
             return BadRequest("Senha inválida!");
+
+         var token = await service.CreateToken(possibleUser);  
         
-        return Ok();
+        return Ok(token.Value);
     }
 
     [HttpPost("register")]

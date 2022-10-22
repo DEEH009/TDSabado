@@ -4,6 +4,9 @@
 
 @inject UserService service
 
+@inject NavigationManager nav
+
+
 <div class="logregcontainer">
     <div class="registercontainer">
         <p>
@@ -68,6 +71,15 @@
             this.userId,
             this.birth, 
             this.password);
+
+            this.name = ""; 
+            this.userId = "";
+            this.birth = DateTime.Now; 
+            this.repeatpassword = "";
+            this.password = "" ;
+
+            this.StateHasChanged();
+            
     }
 
     public async void UserLogin()
@@ -77,12 +89,9 @@
             this.password
         );
         if (result == null)
-        {
-            Console.WriteLine("Não logou");
-        }
-        else
-        {
-            Console.WriteLine("Logou");
-        }
+         return;
+
+         nav.NavigateTo("/");
+        
     }
 }

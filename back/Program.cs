@@ -1,4 +1,8 @@
+using back.Services;
+
+int tokenSize = 32;
 var builder = WebApplication.CreateBuilder(args);
+
 
 // Add services to the container.
 
@@ -6,6 +10,11 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddSingleton<TokenService>(
+    provider => new TokenService(tokenSize)
+);
+
 
 var app = builder.Build();
 
