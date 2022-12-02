@@ -1,4 +1,4 @@
-@page "/login"
+@page "/register"
 
 @using Services;
 
@@ -7,12 +7,10 @@
 @inject NavigationManager nav
 
 
-<div class="logregcontainer">
-    
-    <div class="logincontainer">
+ <div class="registercontainer">
         <p>
-            <label>Nome de Usuario</label>
-            <input type="text" @bind-value="@userId"/>
+            <label>Nome Completo</label>
+            <input type="text" @bind-value="@name"/>
         </p>
 
         <p>
@@ -20,14 +18,28 @@
             <input type="password" @bind-value="@password"/>
         </p>
 
-        <button onclick="@UserLogin">
-            Logar
+        <p>
+            <label>Repetir Senha</label>
+            <input type="password" @bind-value="@repeatpassword"/>
+        </p>
+
+        <p>
+            <label>Data de Nascimento</label>
+            <input type="date" @bind-value="@birth"/>
+        </p>
+
+        <p>
+            <label>Nome de Usuario</label>
+            <input type="text" @bind-value="@userId"/>
+        </p>
+
+        <button onclick="@CreateAccount">
+            Criar Conta
         </button>
     </div>
-</div>
 
 
-@code 
+   @code 
 {
     private string name;
     private string password;
@@ -51,18 +63,7 @@
 
             this.StateHasChanged();
             
-    }
-
-    public async void UserLogin()
-    {
-        var result = await service.Login(
-            this.userId,
-            this.password
-        );
-        if (result == null)
-         return;
-
-         nav.NavigateTo("/");
-        
-    }
+    } 
 }
+
+ 
