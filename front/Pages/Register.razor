@@ -8,6 +8,8 @@
 
 
  <div class="registercontainer">
+
+        <h1>Empresa</h1>
         <p>
             <label>Nome Completo</label>
             <input type="text" @bind-value="@name"/>
@@ -24,8 +26,31 @@
         </p>
 
         <p>
-            <label>Data de Nascimento</label>
-            <input type="date" @bind-value="@birth"/>
+            <label>Nome de Usuario</label>
+            <input type="text" @bind-value="@userId"/>
+        </p>
+
+        <button onclick="@CreateAccount">
+            Criar Conta
+        </button>
+    </div>
+
+    <div class="registercontainer2">
+
+        <h1>Desempregado</h1>
+        <p>
+            <label>Nome Completo</label>
+            <input type="text" @bind-value="@name"/>
+        </p>
+
+        <p>
+            <label>Senha</label>
+            <input type="password" @bind-value="@password"/>
+        </p>
+
+        <p>
+            <label>Repetir Senha</label>
+            <input type="password" @bind-value="@repeatpassword"/>
         </p>
 
         <p>
@@ -37,6 +62,7 @@
             Criar Conta
         </button>
     </div>
+
 
 
    @code 
