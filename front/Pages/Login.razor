@@ -59,23 +59,7 @@
     private DateTime birth;
     private string userId;
 
-    public async void CreateAccount()
-    {
-        await service.Register(
-            this.name, 
-            this.userId,
-            this.birth, 
-            this.password);
-
-            this.name = ""; 
-            this.userId = "";
-            this.birth = DateTime.Now; 
-            this.repeatpassword = "";
-            this.password = "" ;
-
-            this.StateHasChanged();
-            
-    }
+ 
 
     public async void UserLogin()
     {
