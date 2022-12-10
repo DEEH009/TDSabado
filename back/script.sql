@@ -55,3 +55,20 @@ create table Follow(
 	FollowerID int references Usuario(ID),
 );
 go
+
+create table UsuarioE(
+ID int identity primary key,
+	Name varchar(100) not null,
+	DatadeAbertura date not null,
+	UserId varchar(60) not null,
+	Userpass varchar(MAX) not null,
+	email varchar (60) not null,
+	senha varchar (60) not null,
+	cnpj varchar (60) not null,
+	cep varchar (60) not null,
+	rua varchar (60) not null,
+	numero varchar (60) not null ,
+	telefone varchar (60) not null
+	
+);
+go 

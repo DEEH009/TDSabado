@@ -1,74 +1,35 @@
 body{
-    font-family: 'Mulish', sans-serif;
-    font-family: 'Zen Antique', serif;
-    color: #4f3c3c;
-}
-h1,h2,h3{
-    font-family: 'Zen Antique', serif;
-    color: #e9e9e9;
-
-}
-.botao{
-    color: #000000;
-    text-decoration: none;
-    padding: 10px 30px;
-    background-color: #fff9f9;
-    font-size: .9em;
-    border-radius: 3px;
-}
-/*Navegacao*/
-nav{
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #ffffff;
-}
-nav > a {
-    text-decoration: none;
-    color: #000000;
-    font-weight: 800;
-    font-size: 32px;
-    font-family: 'Zen Antique', serif;
-
-
-}
-nav ul {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    list-style: none;
-    padding: 0;
-    width: 100%;
-}
-nav ul li {
     text-align: center;
-    width: 100%;
+    padding: 20px;
+    flex-direction: column;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    color: #9b5e5e;
 }
-nav ul li{
-    display: inline-block;
-    padding: 10px 0;
-    width: 100%;
-    text-decoration: none;
-    color: #FFFFFF;
+h1,h2{
+    display: flex;
+    text-align: center;
+    padding: 20px;
+    flex-direction: column;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    color: #000000;
 
 }
 header{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image: url("../img/emp.jfif");
     background-size: cover;
     background-position: center;
     color: #000000;
     text-align: center;
     padding: 20px;
 
-}
-header h1{
-    color: #000000;
-}
-header p{
-    color: #000000;
+
 }
 #Sobre {
     display: flex;
@@ -76,110 +37,27 @@ header p{
     align-items: center;
     text-align: center;
     padding: 10px 10px 20px 20px;
-    background-image: url("../img/tbl.jfif");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     color: #000000;
 }
-#Sobre h2{
-    color: #ffffff;
 
-}
-#Sobre p {
-    margin-bottom: 2em;
-    max-width: 1000px;
-}
-#Sobre .botao{
-    background-color: #fff4f4;
-    color: #000000;
 
-}
-#Servicos {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
-}
-#Servicos div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 10px;
-
-}
-#Servicos img {
-    margin-bottom: 20px;
-}
-#Contato{
-    display: flex;
-    flex-direction: column;
-    align-items:center ;
-    text-align: center;
-    padding: 20px;
-}
-#Contatos h2{
-    color: #ffffff;
-}
 footer{
     text-align: center;
     padding: 10px;
-    background-color: #ffffff;
+    background-color: #9b5e5e;
     color: #000000;
 }
-footer a {
-    text-decoration: none;
-    color: #060b0b;
-
-}
-@media screen and (min-width: 768px) {
-    nav {
-        flex-direction: row;
-        justify-content: space-around;
-    }
-    nav ul {
-        flex-direction: row;
-        width: 70%;
-    }
     header {
     height: 600px;
     height: 60vh;
     justify-content: center;
     }
-    #Sobre {
-        height: 250px;
-        height: 30vh;
-        justify-content: center;
-    }
-    #Servicos {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        min-height: 250px;
-    }
-    #Servicos h2 {
-        text-align: center;
-        width:  100%;
-    }
-    #Servicos div {
-        flex-grow: 1;
-        flex-basis: 150px;
-        padding: 0/*px*/10px;
-    }
-    #Servicos img {
-        width: 33.3333333%;
+  
 
+    div{
+        background-color: #9b5e5e;
     }
-    #Contato {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        max-width: 500px;
-        margin: 0 auto;
-
-    }
-    #Contato h2, #Contato p {
-        width: 100%;
-
-    }
-}
+   

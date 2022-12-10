@@ -8,12 +8,13 @@
 
 
 <div class="logregcontainer">
-    
+
     <div class="logincontainer">
 
-        <h1> Empresa</h1>        
+
+        <h1> Logar</h1>
         <p>
-            <label>Nome de Usuario</label>
+            <label>Email</label>
             <input type="text" @bind-value="@userId"/>
         </p>
 
@@ -22,31 +23,8 @@
             <input type="password" @bind-value="@password"/>
         </p>
 
-        <button onclick="@UserLogin">
-            Logar
-        </button>
-    </div>
-</div>
-
-<div class="logregcontainer2">
-    
-    <div class="logincontainer2">
-
-        <h1> Desempregado</h1>        
-        <p>
-            <label>Nome de Usuario</label>
-            <input type="text" @bind-value="@userId"/>
-        </p>
-
-        <p>
-            <label>Senha</label>
-            <input type="password" @bind-value="@password"/>
-        </p>
-
-        <button onclick="@UserLogin">
-            Logar
-        </button>
-    </div>
+       <a href="/entrado" class = "botao"> Logar </a>
+     </div>
 </div>
 
 

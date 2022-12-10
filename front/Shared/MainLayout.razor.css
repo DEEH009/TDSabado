@@ -3,6 +3,15 @@
     flex-direction: row;
     justify-content: flex-end;
     list-style: none;
+    padding-left: 2vw;
+    padding-right: 5vw;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: #000000;
 }
 
 .navigation a {
@@ -12,12 +21,12 @@
 }
 
 .navigation a:hover {
-    background-color: blueviolet;
+    background-color: rgb(0, 0, 0);
 }
 
 header {
     background-color:deepskyblue;
-    color: white;
+    color: rgb(209, 0, 0);
 }
 
 .headercontainer {
@@ -29,4 +38,9 @@ header {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+}
+
+div {
+    background-color:#9b5e5e;
+
 }
